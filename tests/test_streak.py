@@ -1,5 +1,10 @@
 import pytest
-from ./streak import longest_positive_streak
+import sys
+import os
+
+# Add the parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from streak import longest_positive_streak
 
 def test_empty_list():
     assert longest_positive_streak([]) == 0
